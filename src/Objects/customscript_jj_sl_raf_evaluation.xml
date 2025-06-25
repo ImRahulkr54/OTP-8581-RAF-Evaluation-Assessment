@@ -1,0 +1,25 @@
+<suitelet scriptid="customscript_jj_sl_raf_evaluation">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>JJ SL RAF Evaluation</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/JobinAndJismi/OTP-8581-RAF-Evaluation/jj_sl_raf_evaluation_otp_8581.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_jj_sl_raf_evaluation">
+      <allemployees>T</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole></audslctrole>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>JJ SL RAF Evaluation</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>
