@@ -1,7 +1,37 @@
 /**
  * @NApiVersion 2.1
+ * 
  * @NScriptType Suitelet
  */
+
+/************************************************************************************  
+********* 
+ * 
+ * OTP-8581 : RAF Evaluation Assessment
+ *
+ *  
+ ************************************************************************************
+ **********
+ *
+ * Author : Jobin and Jismi IT Services
+ * 
+ * Date Created : 25-Jun-2025
+ * 
+ * Description : This script is defined to build a NetSuite Custom Page that integrates
+ *               with the external product API from Dummy JSON. The custom page should
+ *               provide a search interface to enter a product SKU and upon clicking a
+ *               button, It should fetch the full product list and filter the product
+ *               that matches the entered SKU. Also display the Product Details in the
+ *               body of the suitelet & its reviews in a Structured Subtab. 
+ * 
+ * REVISION HISTORY
+ * 
+ * @version 1.0 25-Jun-2025 : Created the initial build by JJ0400
+ * 
+ * 
+ *************************************************************************************
+***********/
+
 define(["N/https", "N/log", "N/record", "N/search", "N/ui/serverWidget"], /**
  * @param{https} https
  * @param{log} log
@@ -160,6 +190,12 @@ define(["N/https", "N/log", "N/record", "N/search", "N/ui/serverWidget"], /**
 
   };
 
+  /**
+   * Defines the Suitelet script to create a custom page
+   * @param {Object} scriptContext
+   * @since 2015.2
+   */
+
   function createCustomPage(scriptContext) {
 
     try {
@@ -187,6 +223,13 @@ define(["N/https", "N/log", "N/record", "N/search", "N/ui/serverWidget"], /**
     }
 
   }
+
+  /**
+   * Defines the Suitelet script to fetch data from external API.
+   * @param {Object} scriptContext
+   * @returns {resultData}
+   * @since 2015.2
+   */
 
   function fetchProductData(scriptContext) {
 
@@ -229,5 +272,5 @@ define(["N/https", "N/log", "N/record", "N/search", "N/ui/serverWidget"], /**
   }
 
   return { onRequest };
-  
+
 });
